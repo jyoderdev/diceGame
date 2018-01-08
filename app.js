@@ -15,7 +15,7 @@ roll in a separate variable)
 2. Add an input field to the HTML where players can set the winning 
 score, so that they can change the predefined score of 100. (Hint: you 
 can read that value with the .value property in JavaScript. This is a 
-good oportunity to use google to figure this out :)
+good opportunity to use Google to figure this out :)
 
 3. Add another dice to the game, so that there are two dices now. The 
 player looses his current score when one of them is a 1. (Hint: you will 
@@ -74,7 +74,9 @@ function init () {
 	roundScore = 0;
 	activePlayer = 0;
 	gamePlaying = true;
+	sixFlag = false;
 	
+	//reset displays to zero 
 	document.getElementById('score-0').textContent = '0';
 	document.getElementById('score-1').textContent = '0';
 	document.getElementById('current-0').textContent = '0';
