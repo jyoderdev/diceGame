@@ -18,10 +18,10 @@ document.querySelector('.btn-roll').addEventListener('click', function() {
 			sixFlag = false;
 		} else if (dice = 1) {
 			//Change to next player
-			nextPlayer();
+			gamePlaying = false;
 		} else if (dice = 6) {
 			if (sixFlag = true) {
-				nextPlayer();
+				gamePlaying = false;
 			} else {
 				sixFlag = true;
 			}
@@ -44,8 +44,7 @@ document.querySelector('.btn-hold').addEventListener('click', function() {
 			document.querySelector('.player-' + activePlayer + '-panel').classList.remove('active');
 			gamePlaying = false;
 		} else {
-  		//Change to next player, reset roundScore to 0
-			nextPlayer();
+  		gamePlaying = false;
 		}
 	}
 	
@@ -87,9 +86,15 @@ function nextPlayer() {
 	//toggle the active class to visibly distinguish active player
 	document.querySelector('.player-0-panel').classList.toggle('active');
 	document.querySelector('.player-1-panel').classList.toggle('active');
-	//Clear die image from screen in prep for next round
-	//document.querySelector('.dice').style.display = 'none';
 }
 
 document.querySelector('.btn-new').addEventListener('click', init);
 
+document.querySelector('.btn-next').addEventListener('click', function() {
+	if (gamePlaying === false) {
+		if (scores[0] < 100 && scores[1] < 100) {
+			gamePlaying = true;
+			nextPlayer();
+		}
+	}
+});
