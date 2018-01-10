@@ -35,8 +35,17 @@ document.querySelector('.btn-hold').addEventListener('click', function() {
 		scores[activePlayer] += roundScore;
 		//update UI
 		document.querySelector('#score-' + activePlayer).textContent = scores[activePlayer];
+		//Input Box Functionality
+		var input = document.querySelector('.play-to').value;
+		
+		if (input) {
+			var endScore = input;
+		} else {
+			endScore = 100;
+		}
+				
 		//Check if player won
-		if (scores[activePlayer] >= 100) {
+		if (scores[activePlayer] >= endScore) {
 			document.querySelector('#name-' + activePlayer).textContent = "WINNER!";
 			//Clear die image from screen in celebration of win
 			document.querySelector('.dice').style.display = 'none';

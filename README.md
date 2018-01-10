@@ -21,7 +21,8 @@ The objectives listed below I completed on my own.
 YOUR 3 CHALLENGES - Change the game to follow these rules:
 
 [X] A player loses his ENTIRE score when he rolls two 6's in a row. After that, it's the next player's turn. (Hint: Always save the previous die roll in a separate variable) -Completed 2018/01/08
+Also added Next Player functionality - not asked for in the challenge - that makes player click next player before dice rolls count. This keeps a player from accidentally rolling the other person's die if s/he gets zealous in his/her clicking.
 
-[ ] Add an input field to the HTML where players can set the winning score, so that they can change the predefined score of 100. (Hint: you can read that value with the .value property in JavaScript. This is a good opportunity to use Google to figure this out)
+[X] Add an input field to the HTML where players can set the winning score, so that they can change the predefined score of 100. (Hint: you can read that value with the .value property in JavaScript. This is a good opportunity to use Google to figure this out) -Completed 2018/01/10
 
-[ ] Add another die to the game, so that there are two dice now. The player loses his current score when one of them is a 1. (Hint: you will need CSS to position the second die, so take a look at the CSS code for the first one.)
+[ ] Add another die to the game, so that there are two dice now. The player loses his current score when one of them is a 1. (Hint: you will need CSS to position the second die, so take a look at the CSS code for the first one.) -Completed 2018/01/10 I completed these steps, but rolled back the changes as I prefer the single die version and it didn't fit well with the input field included.

@@ -64,6 +64,25 @@ body {
     color: #689537;
     margin-bottom: 130px;
 }
+
+.play-to { 
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	top: 320px;
+	color: #555;
+	font-size: 18px;
+	font-family: 'Lato';
+	text-align: center;
+	padding: 10px;
+	width: 160px;
+	text-transform: uppercase;
+}
+
+.play-to:focus {
+	outline: none;
+}
+
 .active { background-color: #a6a6a6; }
 .active .player-name { font-weight: 300; }
 
